@@ -1,25 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button, Icon, Div } from "react-native-magnus";
+import { Div } from "react-native-magnus";
+import Navigation from './components/navigation';
+import History from './components/history';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-
-        <Div>
-          <Button bg="red100" h={40} w={40} rounded="circle" ml="md">
-          <Icon name="scan1" color="red500" />
-        </Button> 
+        <Div style={{
+          marginTop:80
+        }}>
+          <Text fontSize="lg" fontWeight="bold">Image to Text</Text>
         </Div>
-        <Div style={{marginBottom:20}}>
-          <Button bg="red100" h={40} w={40} rounded="circle" ml="md">
-          <Icon name="scan1" color="red500" />
-        </Button> 
-        </Div>
-      
-
-      
+        <History />
+        <Navigation />
       
     </View>
   );
